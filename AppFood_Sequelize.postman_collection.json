@@ -1,0 +1,142 @@
+{
+	"info": {
+		"_postman_id": "6657593b-0324-4d25-9694-4fc535e068b3",
+		"name": "AppFood_Sequelize",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16153542"
+	},
+	"item": [
+		{
+			"name": "likeRestaurant",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"resId\": 6,\n    \"userId\": 11\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}restaurant/like",
+					"host": [
+						"{{domain}}restaurant"
+					],
+					"path": [
+						"like"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createOrder",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"foodId\": 11,\n    \"userId\": 1,\n    \"amount\": 3\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}order/create",
+					"host": [
+						"{{domain}}order"
+					],
+					"path": [
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "rateRestaurant",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"resId\": 6,\n    \"userId\": 11,\n    \"amount\": 3\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}restaurant/rate",
+					"host": [
+						"{{domain}}restaurant"
+					],
+					"path": [
+						"rate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getRatedRestaurant",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}restaurant/get-rated-restaurants?userId=&resId=",
+					"host": [
+						"{{domain}}restaurant"
+					],
+					"path": [
+						"get-rated-restaurants"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": ""
+						},
+						{
+							"key": "resId",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getLikeRestaurant",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}restaurant/get-liked-restaurants?userId=&resId=",
+					"host": [
+						"{{domain}}restaurant"
+					],
+					"path": [
+						"get-liked-restaurants"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": ""
+						},
+						{
+							"key": "resId",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
