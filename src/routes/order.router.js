@@ -1,7 +1,8 @@
 import express from "express";
+import orderController from "../controllers/order.controller.js";
 
-const carRouter = express.Router();
+const orderRouter = express.Router();
 
-// carRouter.get(`/cars-list`, carController.carList);
+orderRouter.post(`/create` , orderController.createOrder);
 
-export default carRouter;
+export default orderRouter;
