@@ -1,5 +1,3 @@
-import { responseError } from "./response.helper.js";
-
 export class BadRequestException extends Error {
    constructor(message = `BadRequestException`) {
       super(message);

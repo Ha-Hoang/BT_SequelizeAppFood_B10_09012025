@@ -1,7 +1,9 @@
 import express from "express";
+import restaurantController from "../controllers/restaurant.controller.js";
 
-const authRouter = express.Router();
+const restaurantRouter = express.Router();
 
-// authRouter.post( `/like` , )
+restaurantRouter.post(`/like` , restaurantController.likeRestaurant);
+restaurantRouter.get(`/get-liked-restaurants` , restaurantController.getLikeRestaurant);
 
-export default authRouter;
+export default restaurantRouter;
